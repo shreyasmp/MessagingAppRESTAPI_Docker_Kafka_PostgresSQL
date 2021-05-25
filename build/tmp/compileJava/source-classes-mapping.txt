@@ -1,0 +1,34 @@
+com/shreyas/messaging/service/MessageService.java
+ com.shreyas.messaging.service.MessageService
+com/shreyas/messaging/model/User.java
+ com.shreyas.messaging.model.User
+com/shreyas/messaging/controller/MessageController.java
+ com.shreyas.messaging.controller.MessageController
+com/shreyas/messaging/exception/DuplicateEntryException.java
+ com.shreyas.messaging.exception.DuplicateEntryException
+com/shreyas/messaging/MessagingApplication.java
+ com.shreyas.messaging.MessagingApplication
+com/shreyas/messaging/model/Message.java
+ com.shreyas.messaging.model.Message
+com/shreyas/messaging/util/MessageUtil.java
+ com.shreyas.messaging.util.MessageUtil
+com/shreyas/messaging/util/UserUtil.java
+ com.shreyas.messaging.util.UserUtil
+com/shreyas/messaging/service/MessageProducer.java
+ com.shreyas.messaging.service.MessageProducer
+com/shreyas/messaging/service/MessageConsumer.java
+ com.shreyas.messaging.service.MessageConsumer
+com/shreyas/messaging/exception/EmptyOrInvalidInputException.java
+ com.shreyas.messaging.exception.EmptyOrInvalidInputException
+com/shreyas/messaging/controller/UserController.java
+ com.shreyas.messaging.controller.UserController
+com/shreyas/messaging/data/UserDTO.java
+ com.shreyas.messaging.data.UserDTO
+com/shreyas/messaging/service/UserService.java
+ com.shreyas.messaging.service.UserService
+com/shreyas/messaging/repository/UserRepository.java
+ com.shreyas.messaging.repository.UserRepository
+com/shreyas/messaging/data/MessageDTO.java
+ com.shreyas.messaging.data.MessageDTO
+com/shreyas/messaging/repository/MessageRepository.java
+ com.shreyas.messaging.repository.MessageRepository

@@ -1,0 +1,40 @@
+version: '3.1'
+
+services:
+  messageapp:
+    image: messageapp
+    container_name: message_app
+    build: ./
+    volumes:
+      - /data/messageapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresqldb
+      - kafka-server
+  postgresqldb:
+    image: postgres
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=messageappdb
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+  kafka-server:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka-server
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+volumes:
+  database-data:

@@ -1,14 +1,10 @@
 package com.shreyas.messaging.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,6 +14,16 @@ public class User {
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;
+
+    public User() {
+        super();
+    }
+
+    public User(Long id, String name) {
+        this();
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;

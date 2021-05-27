@@ -22,6 +22,8 @@ com/shreyas/messaging/exception/EmptyOrInvalidInputException.java
  com.shreyas.messaging.exception.EmptyOrInvalidInputException
 com/shreyas/messaging/controller/UserController.java
  com.shreyas.messaging.controller.UserController
+com/shreyas/messaging/exception/GlobalExceptionHandler.java
+ com.shreyas.messaging.exception.GlobalExceptionHandler
 com/shreyas/messaging/data/UserDTO.java
  com.shreyas.messaging.data.UserDTO
 com/shreyas/messaging/service/UserService.java

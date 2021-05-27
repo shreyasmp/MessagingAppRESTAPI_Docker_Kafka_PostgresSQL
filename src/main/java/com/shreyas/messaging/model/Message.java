@@ -1,14 +1,10 @@
 package com.shreyas.messaging.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "messages")
 public class Message {
@@ -24,6 +20,18 @@ public class Message {
 
     @Column(name = "message")
     private String message;
+
+    public Message() {
+        super();
+    }
+
+    public Message(Long id, Long senderId, Long receiverId, String message) {
+        this();
+        this.id = id;
+        this.senderId = senderId;
+        this.receiverId = receiverId;
+        this.message = message;
+    }
 
     public Long getId() {
         return id;

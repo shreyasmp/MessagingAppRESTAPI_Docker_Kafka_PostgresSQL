@@ -6,7 +6,7 @@ plugins {
 
 group = "org.shreyas.messaging"
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
 
 configurations {
     compileOnly {
@@ -20,13 +20,10 @@ repositories {
 
 test {
     useJUnitPlatform()
-    reports {
-        junitXml.enabled = true
-        html.enabled = false
-    }
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.kafka:spring-kafka'
@@ -39,6 +36,11 @@ dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testImplementation 'com.playtika.testcontainers:embedded-postgresql:1.43'
+    testImplementation 'org.testcontainers:testcontainers:1.12.5'
+    testImplementation 'org.testcontainers:postgresql:1.12.5'
+    testImplementation 'io.rest-assured:rest-assured-all:4.3.0'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.3.0'
     testImplementation "org.mockito:mockito-core:3.8.0"
     testImplementation "org.mockito:mockito-inline:3.8.0"
     testImplementation('org.mockito:mockito-junit-jupiter:2.18.3')

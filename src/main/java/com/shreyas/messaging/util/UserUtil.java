@@ -32,8 +32,4 @@ public class UserUtil {
 
         return user;
     }
-
-    public List<User> dtoToModel(List<UserDTO> users) {
-        return users.stream().map(this::dtoToModel).collect(Collectors.toList());
-    }
 }
